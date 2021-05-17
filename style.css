@@ -1,0 +1,46 @@
+body {
+background-color: grey;
+}
+.container {
+    background-color: rgb(48, 44, 44);
+    color: whitesmoke;
+    height: 60vh;
+    width: 50vh;
+    display: grid;
+    grid-template-rows: 30% auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    padding: 3px 3px;
+    grid-gap: 3px;
+    cursor: default;
+    font-family: Tahoma;
+}
+
+.grid-item {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.result {
+    background-color: transparent;
+    grid-column: 1 / span 4;
+    justify-content: flex-end;
+    align-items:flex-end;
+    font-size: 40px;
+    padding-bottom: 8px;
+    padding-right: 4px;
+}
+
+.result:empty:before {
+    content: '0';
+}
+
+.grid-item:hover:not(.result) {
+    background-color: grey;
+}
+
+.equal {
+    background-color: rgb(19, 73, 19);
+}
